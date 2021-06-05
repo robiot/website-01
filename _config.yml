@@ -1,0 +1,16 @@
+title:              robiot
+author:             robiot
+
+about: I'm an 13 year old person that does software development as a hobby. I primarily develop software in Python and C#
+
+github: https://github.com/robiot
+discord: robiot#5485
+
+# Build settings
+#markdown:           kramdown
+#paginate:           5
+#paginate_path:      "/posts/page:num/"
+#plugins:
+#  - jekyll-feed
+#  - jekyll-paginate
+#  - jekyll-sitemap

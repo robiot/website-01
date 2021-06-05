@@ -1,0 +1,25 @@
+<div class="top-bar">
+    <section class="site-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 site-title" data-aos="fade-down">
+                    
+                    <h3 class="title-text">{{ page.top-title }}</h3>
+                    <h1 class="title-text text-uppercase">{{ page.main-title }}</h1>
+                    <h4 class="title-text">{{ page.description }}
+                        {% if page.title == "Home" %}
+                        <span
+                           class="txt-rotate"
+                           data-period="2000"
+                           data-rotate='[ "Html.", "Css.", "Python.", "C.", "C++.", "C#." ]'></span>
+                        {% endif %}
+                    </h4>
+                </div>
+                
+                <div class="col-lg-6 col-md-12 banner-image" data-aos="flip-right">
+                    <img src="{{ page.banner-image}}" alt="Banner Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,8 @@
+{% for image in site.static_files %}
+{% if image.path contains include.folder %}
+<div class="items" data-aos="fade-left">
+    <img src="{{ image.path | url_encode }}" />
+    <a>{{ image.name | remove: ".svg" }}</a>
+</div>
+{% endif %}
+{% endfor %}

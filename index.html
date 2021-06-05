@@ -1,0 +1,66 @@
+---
+layout: default
+banner-image: ./img/desk.svg
+
+top-title: Hey
+main-title: I am robiot
+description: I code stuff in
+
+title: "Home"
+---
+
+<div class="container-md">
+    <div class="row v-sep">
+        {% include home-img.html dir="/img/much.svg" alt="About Me" aos="zoom-out" %}
+
+
+        <div class="col-lg-6 col-md-12 about-title" data-aos="fade-up">
+            <h2 class="text-uppercase pt-5">
+                <span>About</span>
+                <span>Me</span>
+            </h2>
+            <div class="paragraph py-4 w-75">
+                <p class="para">
+                    {{ site.about }}
+                </p>
+                <p class="para">
+                    I also learn some ethical hacking for fun
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row v-sep">
+        {% include home-img.html dir="/img/fixed.svg" alt="ExperienceImg" aos="zoom-out" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);" class="hide-big"%}
+        <div class="col-lg-6 col-md-12 about-title">
+            <div class="skills-container v-sep-sm" data-aos="fade-up">
+                <h2 class="text-uppercase">
+                    <span>Experience</span>
+                </h2>
+        
+                <div class="container">
+                    {% for image in site.static_files %}
+                    {% if image.path contains 'img/langs/experience' %}
+                    <div class="items" data-aos="fade-left">
+                        <img src="{{ image.path | url_encode }}" />
+                        <a>{{ image.name | remove: image.extname }}</a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="skills-container v-sep-sm" data-aos="fade-up">
+                <h2 class="text-uppercase">
+                    <span>I am learning</span>
+                </h2>
+                <div class="container v-sep-sm">
+                    {% include lang-img.html folder='img/langs/learning' %}
+                </div>
+            </div>
+        </div>
+        
+        {% include home-img.html dir="/img/fixed.svg" alt="ExperienceImg" aos="zoom-out" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);" class="hide-small"%}
+
+    </div>
+</div>

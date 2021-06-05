@@ -1,0 +1,18 @@
+<html>
+<head>
+{% include includes.html %}
+<title>{{ page.title }} - {{ site.title }}</title>
+</head>
+<body>
+{% include navbar.html %}
+{{ content }}
+<script src="/assets/js/aos.js"></script>
+<script>
+AOS.init({
+  duration: 700,
+  //once: true
+});
+</script>
+{% include footer.html %}
+</body>
+</html>
